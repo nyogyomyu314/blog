@@ -3471,12 +3471,29 @@ export enum _SystemDateTimeFieldVariation {
 export type PostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type PostsQuery = { __typename?: 'Query', posts: Array<{ __typename?: 'Post', title?: string | null, description?: string | null, image?: string | null, movie?: string | null, publishedAt?: any | null }> };
+export type PostsQuery = { __typename?: 'Query', posts: Array<{ __typename?: 'Post', title?: string | null, image?: string | null, movie?: string | null, publishedAt?: any | null }> };
+
+export type PostQueryVariables = Exact<{
+  movie: Scalars['String'];
+}>;
+
+
+export type PostQuery = { __typename?: 'Query', post?: { __typename?: 'Post', title?: string | null, description?: string | null, image?: string | null, movie?: string | null, publishedAt?: any | null } | null };
 
 
 export const PostsDocument = gql`
     query Posts {
   posts {
+    title
+    image
+    movie
+    publishedAt
+  }
+}
+    `;
+export const PostDocument = gql`
+    query Post($movie: String!) {
+  post(where: {movie: $movie}) {
     title
     description
     image
@@ -3495,6 +3512,9 @@ export function getSdk(client: GraphQLClient, withWrapper: SdkFunctionWrapper = 
   return {
     Posts(variables?: PostsQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<PostsQuery> {
       return withWrapper((wrappedRequestHeaders) => client.request<PostsQuery>(PostsDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'Posts', 'query');
+    },
+    Post(variables: PostQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<PostQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<PostQuery>(PostDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'Post', 'query');
     }
   };
 }

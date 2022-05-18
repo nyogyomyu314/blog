@@ -1,6 +1,15 @@
 query Posts {
   posts {
     title
+    image
+    movie
+    publishedAt
+  }
+}
+
+query Post($movie: String!) {
+  post(where: { movie: $movie }) {
+    title
     description
     image
     movie
