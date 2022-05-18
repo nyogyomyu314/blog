@@ -1,4 +1,7 @@
-import type { LoaderFunction } from "@remix-run/cloudflare";
+import type {
+  LoaderFunction,
+  MetaFunction,
+} from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
 import type { VFC } from "react";
 import { Layout } from "~/components/Layout";
@@ -21,10 +24,22 @@ export const loader: LoaderFunction = async ({
       movie: params.slug,
     },
   );
-
   const { post } = data;
 
   return { post };
+};
+
+// ここまで
+//
+//
+//
+// ここから
+
+export const meta: MetaFunction = ({ data }) => {
+  return {
+    title: data.post?.title,
+    description: data.post?.description,
+  };
 };
 
 // ここまで
@@ -38,7 +53,7 @@ const Post: VFC = () => {
 
   return (
     <Layout>
-      <div className="flex max-w-[800px] flex-wrap items-end gap-x-10 gap-y-3 py-5 md:min-w-[600px]">
+      <div className="flex max-w-[600px] flex-wrap items-end gap-x-10 gap-y-3 py-5 md:min-w-[600px]">
         <h2 className="text-2xl">{post?.title}</h2>
         <p className="w-full text-right">
           {post?.publishedAt
@@ -49,7 +64,7 @@ const Post: VFC = () => {
       <div className="relative w-full pt-[75%]">
         <iframe
           title="movie"
-          src={`https://www.dmm.co.jp/litevideo/-/part/=/cid=${post?.movie}/size=1280_720/`}
+          src={`https://www.dmm.co.jp/litevideo/-/part/=/cid=${post?.movie}/size=600_500/`}
           scrolling="no"
           frameBorder={0}
           allowFullScreen
@@ -57,7 +72,7 @@ const Post: VFC = () => {
         ></iframe>
       </div>
       <p className="pt-5 pb-10">{post?.description}</p>
-      <div className="mb-20 space-y-10">
+      <div className="mb-20 space-y-5 md:space-y-10">
         <div className="text-center">
           <a
             href={`https://www.dmm.co.jp/digital/videoa/-/detail/=/cid=${post?.movie}/`}
