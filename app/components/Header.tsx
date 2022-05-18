@@ -22,13 +22,15 @@ const items = [
 export const Header: VFC = memo(() => {
   return (
     <header>
-      <div className="mx-auto max-w-[1040px] px-5">
-        <h1 className="py-5">
-          <img
-            src="/images/logo.svg"
-            alt="巨乳エロ無料動画 ピクルス"
-            className="mx-auto md:mx-0"
-          />
+      <div className="mx-auto max-w-[1040px] px-[4%] md:px-5">
+        <h1 className="py-5 text-center md:text-left">
+          <Link to={"/"}>
+            <img
+              src="/images/logo.svg"
+              alt="巨乳エロ無料動画 ピクルス"
+              className="mx-auto inline-block h-full md:mx-0"
+            />
+          </Link>
         </h1>
       </div>
       <div className="bg-main-300">
