@@ -28,7 +28,7 @@ const Index: VFC = () => {
               <div>
                 <img
                   src={`https://pics.dmm.co.jp/digital/video/${post.movie}/${post.image}.jpg`}
-                  alt="商品画像"
+                  alt={`${post.title}`}
                   className="w-full object-cover"
                 />
               </div>

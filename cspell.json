@@ -12,9 +12,12 @@
   "dictionaryDefinitions": [],
   "dictionaries": [],
   "words": [
+    "gtag",
+    "gtags",
     "LIFF",
     "mainvisual",
     "MICROCMS",
+    "pageview",
     "tailwindcss"
   ],
   "ignoreWords": [
