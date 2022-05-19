@@ -58,8 +58,6 @@ export default function App() {
       <head>
         <Meta />
         <Links />
-      </head>
-      <body>
         {process.env.NODE_ENV === "development" ||
         !gaTrackingId ? null : (
           <>
@@ -83,7 +81,8 @@ export default function App() {
             />
           </>
         )}
-
+      </head>
+      <body>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
