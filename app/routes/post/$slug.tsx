@@ -4,6 +4,7 @@ import type {
 } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
 import type { VFC } from "react";
+import { Breadcrumb } from "~/components/Breadcrumb";
 import { Layout } from "~/components/Layout";
 import type { PostQuery } from "~/graphql/generated";
 import { PostDocument } from "~/graphql/generated";
@@ -53,6 +54,7 @@ const Post: VFC = () => {
 
   return (
     <Layout>
+      <Breadcrumb value="FANZA 無料動画" />
       <div className="flex max-w-[600px] flex-wrap items-end gap-x-10 gap-y-3 py-5 md:min-w-[600px]">
         <h2 className="text-2xl">{post?.title}</h2>
         <p className="w-full text-right">

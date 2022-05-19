@@ -1,5 +1,6 @@
 import { Link } from "@remix-run/react";
 import type { VFC } from "react";
+import { Breadcrumb } from "~/components/Breadcrumb";
 import { Layout } from "~/components/Layout";
 
 // ここまで
@@ -37,6 +38,7 @@ const items = [
 const About: VFC = () => {
   return (
     <Layout>
+      <Breadcrumb value="当サイトについて" />
       <div className="mb-20 max-w-[600px] pt-10">
         {items.map((item, index) => (
           <div key={index} className="mb-16">

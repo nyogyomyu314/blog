@@ -3,6 +3,7 @@ import { redirect } from "@remix-run/cloudflare";
 import { Form, useTransition } from "@remix-run/react";
 import type { VFC } from "react";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { Breadcrumb } from "~/components/Breadcrumb";
 import { Layout } from "~/components/Layout";
 
 // ここまで
@@ -69,10 +70,8 @@ const Contact: VFC = () => {
         </div>
       )}
 
-      <h1 className="mx-auto py-5 capitalize">
-        お問い合せ
-      </h1>
-      <Form method="post" className="mx-auto mb-20">
+      <Breadcrumb value="お問い合わせ" />
+      <Form method="post" className="mx-auto mb-20 mt-10">
         <div className="mb-10 space-y-5 md:flex md:flex-row md:flex-wrap md:gap-x-3 md:gap-y-5 md:space-y-0">
           <input
             type="text"
