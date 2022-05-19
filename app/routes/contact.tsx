@@ -72,7 +72,7 @@ const Contact: VFC = () => {
       <h1 className="mx-auto py-5 capitalize">
         お問い合せ
       </h1>
-      <Form method="post" className="mx-auto">
+      <Form method="post" className="mx-auto mb-20">
         <div className="mb-10 space-y-5 md:flex md:flex-row md:flex-wrap md:gap-x-3 md:gap-y-5 md:space-y-0">
           <input
             type="text"

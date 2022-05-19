@@ -47,7 +47,7 @@ const About: VFC = () => {
             </div>
           </div>
         ))}
-        <div>
+        <div className="text-center md:text-left">
           <Link to={`/contact`} className="text-main-300">
             お問合せはこちらから
           </Link>
