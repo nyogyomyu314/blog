@@ -37,7 +37,10 @@ export const Header: VFC = memo(() => {
         <ul className="mx-auto flex  max-w-[1040px] justify-center gap-5 py-2 px-5 md:justify-start">
           {items.map((item) => (
             <li key={item.slug}>
-              <Link className="text-white" to={item.slug}>
+              <Link
+                className="text-white"
+                to={`/${item.slug}`}
+              >
                 {item.value}
               </Link>
             </li>
