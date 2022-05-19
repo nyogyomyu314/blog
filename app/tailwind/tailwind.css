@@ -552,24 +552,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: calc(100vh - 152px);
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .h-\[350px\] {
   height: 350px;
 }
 
-.h-10 {
-  height: 2.5rem;
+.h-40 {
+  height: 10rem;
 }
 
 .min-h-screen {
   min-height: 100vh;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-10 {
   width: 2.5rem;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .max-w-\[1040px\] {
@@ -578,10 +582,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-w-\[600px\] {
   max-width: 600px;
-}
-
-.max-w-\[800px\] {
-  max-width: 800px;
 }
 
 .max-w-\[400px\] {
@@ -617,10 +617,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-rows-4 {
-  grid-template-rows: repeat(4, minmax(0, 1fr));
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -639,10 +635,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-5 {
   gap: 1.25rem;
-}
-
-.gap-y-5 {
-  row-gap: 1.25rem;
 }
 
 .gap-y-10 {
@@ -674,6 +666,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-x-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .border {
@@ -814,16 +812,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
 
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .transition {
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-all {
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -834,11 +832,6 @@ body {
 
 .hover\:border-transparent:hover {
   border-color: transparent;
-}
-
-.hover\:bg-slate-800:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-main-300:hover {
@@ -880,16 +873,12 @@ body {
     display: flex;
   }
 
-  .md\:h-\[calc\(100vh_-_124px\)\] {
-    height: calc(100vh - 124px);
+  .md\:h-\[calc\(100vh_-_145px\)\] {
+    height: calc(100vh - 145px);
   }
 
   .md\:h-40 {
     height: 10rem;
-  }
-
-  .md\:h-\[calc\(100vh_-_145px\)\] {
-    height: calc(100vh - 145px);
   }
 
   .md\:w-40 {
@@ -929,10 +918,20 @@ body {
          column-gap: 0.75rem;
   }
 
+  .md\:gap-y-5 {
+    row-gap: 1.25rem;
+  }
+
   .md\:space-y-10 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+  }
+
+  .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
   .md\:px-5 {

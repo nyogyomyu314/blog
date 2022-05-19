@@ -61,8 +61,6 @@ const Contact: VFC = () => {
   const transition = useTransition();
   const busy = transition.submission;
 
-  console.log(transition.submission);
-
   return (
     <Layout>
       {busy && (
@@ -71,43 +69,38 @@ const Contact: VFC = () => {
         </div>
       )}
 
-      <div className="max-w-[1040px] px-[4%] md:px-5">
-        <h1 className="mx-auto max-w-[800px] py-5 capitalize">
-          お問い合せ
-        </h1>
-        <Form
-          method="post"
-          className="mx-auto max-w-[800px]"
-        >
-          <div className="mb-10 grid grid-rows-4 gap-y-5 md:flex md:flex-row md:flex-wrap md:gap-x-3">
-            <input
-              type="text"
-              name="name"
-              placeholder="名前"
-              className="border p-3 md:basis-[calc(50%_-_6px)]"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="メール *"
-              required
-              className="border p-3 md:basis-[calc(50%_-_6px)]"
-            />
-            <textarea
-              name="message"
-              placeholder="お問い合わせ内容"
-              className="row-span-2 border p-3 md:h-40 md:basis-full"
-            />
-          </div>
-          <button
-            className="w-full border border-slate-800 py-5 transition-all hover:border-transparent
+      <h1 className="mx-auto py-5 capitalize">
+        お問い合せ
+      </h1>
+      <Form method="post" className="mx-auto">
+        <div className="mb-10 space-y-5 md:flex md:flex-row md:flex-wrap md:gap-x-3 md:gap-y-5 md:space-y-0">
+          <input
+            type="text"
+            name="name"
+            placeholder="名前"
+            className="w-full border p-3 md:basis-[calc(50%_-_6px)]"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="メール *"
+            required
+            className="w-full border p-3 md:basis-[calc(50%_-_6px)]"
+          />
+          <textarea
+            name="message"
+            placeholder="お問い合わせ内容"
+            className="row-span-2 h-40 w-full border p-3 md:basis-full"
+          />
+        </div>
+        <button
+          className="w-full border border-slate-800 py-5 transition-all hover:border-transparent
           hover:bg-main-300 hover:text-white md:w-40"
-            type="submit"
-          >
-            送信
-          </button>
-        </Form>
-      </div>
+          type="submit"
+        >
+          送信
+        </button>
+      </Form>
     </Layout>
   );
 };
