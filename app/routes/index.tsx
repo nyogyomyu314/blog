@@ -21,7 +21,7 @@ const Index: VFC = () => {
   return (
     <Layout>
       <h1 className="py-5">ホーム</h1>
-      <div className="mb-20 grid grid-cols-2 gap-5 text-sm md:grid-cols-3 md:text-base">
+      <div className="mb-20 grid grid-cols-1 gap-5 text-sm md:grid-cols-3 md:text-base">
         {posts.map((post) => (
           <Link to={`/post/${post.movie}`} key={post.movie}>
             <div className="space-y-2">
@@ -29,7 +29,7 @@ const Index: VFC = () => {
                 <img
                   src={`https://pics.dmm.co.jp/digital/video/${post.movie}/${post.image}.jpg`}
                   alt={`${post.title}`}
-                  className="w-full object-cover"
+                  className="h-[250px] w-full object-cover"
                 />
               </div>
               <h2>{post.title}</h2>
