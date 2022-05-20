@@ -38,21 +38,25 @@ const items = [
 const About: VFC = () => {
   return (
     <Layout>
-      <Breadcrumb value="当サイトについて" />
-      <div className="mb-20 max-w-[600px] pt-10">
-        {items.map((item, index) => (
-          <div key={index} className="mb-16">
-            <h2 className="mb-5 text-3xl">{item.title}</h2>
-            <div className="space-y-5">
-              <p>{item.text}</p>
-              <p>{item.text2}</p>
+      <div className="mx-auto max-w-[1040px] px-[4%] md:px-5">
+        <Breadcrumb value="当サイトについて" />
+        <div className="mb-20 max-w-[600px] pt-10">
+          {items.map((item, index) => (
+            <div key={index} className="mb-16">
+              <h2 className="mb-5 text-3xl">
+                {item.title}
+              </h2>
+              <div className="space-y-5">
+                <p>{item.text}</p>
+                <p>{item.text2}</p>
+              </div>
             </div>
+          ))}
+          <div className="text-center md:text-left">
+            <Link to={`/contact`} className="text-main-300">
+              お問合せはこちらから
+            </Link>
           </div>
-        ))}
-        <div className="text-center md:text-left">
-          <Link to={`/contact`} className="text-main-300">
-            お問合せはこちらから
-          </Link>
         </div>
       </div>
     </Layout>

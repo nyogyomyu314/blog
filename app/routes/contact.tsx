@@ -70,36 +70,38 @@ const Contact: VFC = () => {
         </div>
       )}
 
-      <Breadcrumb value="お問い合わせ" />
-      <Form method="post" className="mx-auto mb-20 mt-10">
-        <div className="mb-10 space-y-5 md:flex md:flex-row md:flex-wrap md:gap-x-3 md:gap-y-5 md:space-y-0">
-          <input
-            type="text"
-            name="name"
-            placeholder="名前"
-            className="w-full border p-3 md:basis-[calc(50%_-_6px)]"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="メール *"
-            required
-            className="w-full border p-3 md:basis-[calc(50%_-_6px)]"
-          />
-          <textarea
-            name="message"
-            placeholder="お問い合わせ内容"
-            className="row-span-2 h-40 w-full border p-3 md:basis-full"
-          />
-        </div>
-        <button
-          className="w-full border border-slate-800 py-5 transition-all hover:border-transparent
+      <div className="mx-auto max-w-[840px] px-[4%] md:px-5">
+        <Breadcrumb value="お問い合わせ" />
+        <Form method="post" className="mx-auto mb-20 mt-10">
+          <div className="mb-10 space-y-5 md:flex md:flex-row md:flex-wrap md:gap-x-3 md:gap-y-5 md:space-y-0">
+            <input
+              type="text"
+              name="name"
+              placeholder="名前"
+              className="w-full border p-3 md:basis-[calc(50%_-_6px)]"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="メール *"
+              required
+              className="w-full border p-3 md:basis-[calc(50%_-_6px)]"
+            />
+            <textarea
+              name="message"
+              placeholder="お問い合わせ内容"
+              className="row-span-2 h-40 w-full border p-3 md:basis-full"
+            />
+          </div>
+          <button
+            className="w-full border border-slate-800 py-5 transition-all hover:border-transparent
           hover:bg-main-300 hover:text-white md:w-40"
-          type="submit"
-        >
-          送信
-        </button>
-      </Form>
+            type="submit"
+          >
+            送信
+          </button>
+        </Form>
+      </div>
     </Layout>
   );
 };
