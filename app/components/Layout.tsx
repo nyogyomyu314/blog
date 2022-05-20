@@ -23,9 +23,7 @@ export const Layout: VFC<PROPS> = memo(({ children }) => {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <div className="mx-auto max-w-[1040px] grow px-[4%] md:px-5">
-        {children}
-      </div>
+      <div className="grow">{children}</div>
       <Footer />
     </div>
   );
