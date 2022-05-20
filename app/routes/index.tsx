@@ -21,7 +21,7 @@ const Index: VFC = () => {
   return (
     <Layout>
       <div className="mb-20 grid grid-cols-1 gap-y-10 pt-10 text-sm sm:grid-cols-2 sm:gap-5 md:grid-cols-3 md:text-base">
-        {posts.map((post) => (
+        {posts.reverse().map((post) => (
           <Link to={`/post/${post.movie}`} key={post.movie}>
             <div className="space-y-2">
               <div>
