@@ -59,7 +59,7 @@ const Post: VFC = () => {
         <div className="flex flex-wrap items-end gap-x-10 gap-y-3 py-5">
           <h2 className="text-2xl">{post?.title}</h2>
           <p className="w-full text-right">
-            {post?.publishedAt
+            {post?.createdAt
               .slice(0, 10)
               .replace(/(.+)-(.+)-(.+)/g, "$1年$2月$3日")}
           </p>

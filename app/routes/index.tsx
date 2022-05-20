@@ -11,6 +11,7 @@ export const loader: LoaderFunction = async () => {
     PostsDocument.loc?.source.body,
   );
   const { posts } = data;
+  posts.reverse();
 
   return { posts };
 };
@@ -21,7 +22,7 @@ const Index: VFC = () => {
   return (
     <Layout>
       <div className="mx-auto mb-20 grid max-w-[1040px] grid-cols-1 gap-y-10 px-[4%] pt-10 text-sm sm:grid-cols-2 sm:gap-5 md:grid-cols-3 md:px-5 md:text-base">
-        {posts.reverse().map((post) => (
+        {posts.map((post) => (
           <Link to={`/post/${post.movie}`} key={post.movie}>
             <div className="space-y-2">
               <div>
@@ -33,7 +34,7 @@ const Index: VFC = () => {
               </div>
               <h2>{post.title}</h2>
               <p>
-                {post.publishedAt
+                {post.createdAt
                   .slice(0, 10)
                   .replace(
                     /(.+)-(.+)-(.+)/g,

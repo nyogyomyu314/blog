@@ -3471,14 +3471,14 @@ export enum _SystemDateTimeFieldVariation {
 export type PostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type PostsQuery = { __typename?: 'Query', posts: Array<{ __typename?: 'Post', title?: string | null, image?: string | null, movie?: string | null, publishedAt?: any | null }> };
+export type PostsQuery = { __typename?: 'Query', posts: Array<{ __typename?: 'Post', title?: string | null, image?: string | null, movie?: string | null, createdAt: any }> };
 
 export type PostQueryVariables = Exact<{
   movie: Scalars['String'];
 }>;
 
 
-export type PostQuery = { __typename?: 'Query', post?: { __typename?: 'Post', title?: string | null, description?: string | null, image?: string | null, movie?: string | null, publishedAt?: any | null } | null };
+export type PostQuery = { __typename?: 'Query', post?: { __typename?: 'Post', title?: string | null, description?: string | null, movie?: string | null, createdAt: any, image?: string | null } | null };
 
 
 export const PostsDocument = gql`
@@ -3487,7 +3487,7 @@ export const PostsDocument = gql`
     title
     image
     movie
-    publishedAt
+    createdAt
   }
 }
     `;
@@ -3496,9 +3496,9 @@ export const PostDocument = gql`
   post(where: {movie: $movie}) {
     title
     description
-    image
     movie
-    publishedAt
+    createdAt
+    image
   }
 }
     `;

@@ -3,7 +3,7 @@ query Posts {
     title
     image
     movie
-    publishedAt
+    createdAt
   }
 }
 
@@ -11,8 +11,8 @@ query Post($movie: String!) {
   post(where: { movie: $movie }) {
     title
     description
-    image
     movie
-    publishedAt
+    createdAt
+    image
   }
 }

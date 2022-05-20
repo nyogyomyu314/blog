@@ -588,12 +588,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 600px;
 }
 
-.max-w-\[400px\] {
-  max-width: 400px;
-}
-
 .max-w-\[840px\] {
   max-width: 840px;
+}
+
+.max-w-\[400px\] {
+  max-width: 400px;
 }
 
 .grow {
