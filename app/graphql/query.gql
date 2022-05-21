@@ -1,5 +1,5 @@
-query Posts {
-  posts {
+query Dmms {
+  dmms {
     title
     image
     movie
@@ -7,8 +7,8 @@ query Posts {
   }
 }
 
-query Post($movie: String!) {
-  post(where: { movie: $movie }) {
+query Dmm($movie: String!) {
+  dmm(where: { movie: $movie }) {
     title
     description
     movie
