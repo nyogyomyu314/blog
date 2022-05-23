@@ -51,22 +51,38 @@ const Post: VFC = () => {
           </p>
         </div>
         <a
-          className="w-full"
           href={`${post?.movie}?promo=38899`}
+          target={"_blank"}
+          rel="noreferrer"
         >
           <img
             src={`${post?.image}`}
             alt={`${post?.title}`}
+            className="mx-auto"
           />
         </a>
         <div className="mb-20 mt-10 space-y-5 md:space-y-10">
-          <div className="text-center">
-            <a
-              href={`${post?.dmm}`}
-              className="inline-block w-full max-w-[400px] border-2 border-main-300 py-3 text-lg text-main-300"
-            >
-              この動画を高画質フルで見る
-            </a>
+          <div className="space-y-2 text-center">
+            {post?.dmm && (
+              <a
+                href={`${post?.dmm}`}
+                className="inline-block w-full max-w-[400px] border-2 border-main-300 py-3 text-lg text-main-300"
+                target={"_blank"}
+                rel="noreferrer"
+              >
+                この動画を高画質フルで見る
+              </a>
+            )}
+            {post?.mgs && (
+              <a
+                href={`${post?.mgs}`}
+                className="inline-block w-full max-w-[400px] border-2 border-main-300 py-3 text-lg text-main-300"
+                target={"_blank"}
+                rel="noreferrer"
+              >
+                この動画を高画質フルで見る
+              </a>
+            )}
           </div>
           <div className="text-center">
             <a
