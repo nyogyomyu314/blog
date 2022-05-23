@@ -16,3 +16,23 @@ query Dmm($movie: String!) {
     image
   }
 }
+
+query Posts {
+  posts {
+    title
+    image
+    createdAt
+    id
+  }
+}
+
+query Post($id: ID) {
+  post(where: { id: $id }) {
+    title
+    movie
+    image
+    dmm
+    mgs
+    createdAt
+  }
+}
