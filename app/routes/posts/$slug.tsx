@@ -36,8 +36,6 @@ export const loader: LoaderFunction = async ({
 const Post: VFC = () => {
   const { post } = useLoaderData() as PostQuery;
 
-  console.log(post?.dmm);
-
   return (
     <Layout>
       <div className="mx-auto max-w-[600px] px-[4%] md:min-w-[600px] md:px-0">

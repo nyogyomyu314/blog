@@ -44,7 +44,9 @@ const Index: VFC = () => {
                   className="h-[350px] w-full object-cover sm:h-[250px]"
                 />
               </div>
-              <h2>{post.title}</h2>
+              <h2 className="overflow-hidden text-ellipsis line-clamp-3 hover:line-clamp-none">
+                {post.title}
+              </h2>
               <p>
                 {post.createdAt
                   .slice(0, 10)

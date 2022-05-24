@@ -684,10 +684,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
-.space-x-5 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
-  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
 }
 
 .border {
@@ -838,8 +840,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
 body {
   color: #1e293b;
+}
+
+.hover\:text-clip:hover {
+  text-overflow: clip;
 }
 
 .hover\:border-transparent:hover {
@@ -863,6 +876,10 @@ body {
 
 .hover\:opacity-70:hover {
   opacity: 0.7;
+}
+
+.hover\:line-clamp-none:hover {
+  -webkit-line-clamp: unset;
 }
 
 @media (min-width: 640px) {
