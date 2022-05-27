@@ -91,6 +91,11 @@ const Post: VFC = () => {
             </a>
           </div>
         </div>
+        <script
+          id="uh2lwuz1b4ic"
+          type="text/javascript"
+          src="https://img.ad-nex.com/file/universal_tag/mh2lwucku45a/uh2lwuz1b4ic.js"
+        ></script>
       </div>
     </Layout>
   );
