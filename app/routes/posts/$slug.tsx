@@ -56,7 +56,7 @@ const Post: VFC = () => {
           <img
             src={`${post?.image}`}
             alt={`${post?.title}`}
-            className="mx-auto"
+            className="mx-auto pb-10"
           />
         </a>
         <script
