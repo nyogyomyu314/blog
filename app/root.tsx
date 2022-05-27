@@ -15,6 +15,7 @@ import {
   useLocation,
 } from "@remix-run/react";
 import { useEffect } from "react";
+import { useShouldHydrate } from "remix-utils";
 import tailwind from "~/tailwind/tailwind.css";
 import * as gtag from "~/utils/gtags.client";
 
@@ -46,6 +47,8 @@ export const loader: LoaderFunction = async () => {
 export default function App() {
   const { gaTrackingId } = useLoaderData();
   const location = useLocation();
+
+  const shouldHydrate = useShouldHydrate();
 
   useEffect(() => {
     if (gaTrackingId?.length) {
@@ -85,7 +88,7 @@ export default function App() {
       <body>
         <Outlet />
         <ScrollRestoration />
-        <Scripts />
+        {shouldHydrate && <Scripts />}
         <LiveReload />
       </body>
     </html>
