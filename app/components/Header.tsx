@@ -47,6 +47,11 @@ export const Header: VFC = memo(() => {
           ))}
         </ul>
       </div>
+      <script
+        id="uh2lwur60lk4"
+        type="text/javascript"
+        src="https://img.ad-nex.com/file/universal_tag/mh2lwucku45a/uh2lwur60lk4.js"
+      ></script>
     </header>
   );
 });
