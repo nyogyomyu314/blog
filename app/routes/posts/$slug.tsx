@@ -59,6 +59,11 @@ const Post: VFC = () => {
             className="mx-auto"
           />
         </a>
+        <script
+          id="uh2lwuz1b4ic"
+          type="text/javascript"
+          src="https://img.ad-nex.com/file/universal_tag/mh2lwucku45a/uh2lwuz1b4ic.js"
+        ></script>
         <div className="mb-20 mt-10 space-y-5 md:space-y-10">
           <div className="space-y-2 text-center">
             {post?.dmm && (
@@ -91,11 +96,6 @@ const Post: VFC = () => {
             </a>
           </div>
         </div>
-        <script
-          id="uh2lwuz1b4ic"
-          type="text/javascript"
-          src="https://img.ad-nex.com/file/universal_tag/mh2lwucku45a/uh2lwuz1b4ic.js"
-        ></script>
       </div>
     </Layout>
   );

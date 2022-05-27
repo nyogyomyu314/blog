@@ -12,6 +12,8 @@
   "dictionaryDefinitions": [],
   "dictionaries": [],
   "words": [
+    "uh2lwur60lk4",
+    "uh2lwuz1b4ic",
     "dmms",
     "FANZA",
     "gtag",
@@ -58,7 +60,5 @@
     "vitejs"
   ],
   "import": [],
-  "enableFiletypes": [
-    "prisma"
-  ]
+  "enableFiletypes": ["prisma"]
 }
