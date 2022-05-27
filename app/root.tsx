@@ -83,6 +83,11 @@ export default function App() {
         )}
       </head>
       <body>
+        <script
+          id="uh2lwur60lk4"
+          type="text/javascript"
+          src="https://img.ad-nex.com/file/universal_tag/mh2lwucku45a/uh2lwur60lk4.js"
+        ></script>
         <Outlet />
         <ScrollRestoration />
         <Scripts />

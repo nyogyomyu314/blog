@@ -33,6 +33,8 @@ const Index: VFC = () => {
 
   return (
     <Layout>
+      <span id="uh2lwur60lk4"></span>
+
       <div className="mx-auto mb-20 grid max-w-[1040px] grid-cols-1 gap-y-10 px-[4%] pt-10 text-sm sm:grid-cols-2 sm:gap-5 md:grid-cols-3 md:px-5 md:text-base">
         {posts.map((post) => (
           <Link to={`posts/${post.id}`} key={post.id}>

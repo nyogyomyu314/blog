@@ -851,10 +851,6 @@ body {
   color: #1e293b;
 }
 
-.hover\:text-clip:hover {
-  text-overflow: clip;
-}
-
 .hover\:border-transparent:hover {
   border-color: transparent;
 }
